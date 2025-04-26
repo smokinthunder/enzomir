@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
   //Text Colors
   static const Color titleTextColor = Color(0xFF20222C);
+  static const Color subtitleTextColor = Color(0xFF959CB6);
   static const Color whiteTextColor = Color(0xFFFDFDFD);
   static const Color whiteButtonTextColor = Color(0xFF313957); 
 

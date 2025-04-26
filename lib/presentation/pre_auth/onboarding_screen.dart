@@ -19,20 +19,16 @@ class OnboardingScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Title
           Gap(80),
           Text(
             'ENZOMIR',
             style: AppTextStyles.onboardingHeading,
             textAlign: TextAlign.center,
           ),
-
           Image.asset(
             "assets/images/onboarding/image.png",
             height: screenHeight / 3,
           ),
-
-          // Bottom section with blue background
           Container(
             height: screenHeight / 3,
             width: screenWidth,
@@ -45,10 +41,8 @@ class OnboardingScreen extends StatelessWidget {
             ),
             padding: EdgeInsets.all(20),
             child: Column(
-              // mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // Description text
                 SizedBox(
                   width: screenWidth * 0.61,
                   child: Text(
@@ -57,9 +51,6 @@ class OnboardingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-
-                // Spacer
-                // SizedBox(height: 30),
                 Container(
                   width: screenWidth * 0.77,
                   height: screenWidth * 0.14,
@@ -79,14 +70,12 @@ class OnboardingScreen extends StatelessWidget {
                       SizedBox(width: 10),
                       Icon(
                         Icons.arrow_circle_right_rounded,
-                        size: 18,
+                        size: 20,
                         color: AppColors.whiteButtonTextColor,
                       ),
                     ],
                   ),
                 ),
-
-                // Get Started button
               ],
             ),
           ),

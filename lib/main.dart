@@ -1,4 +1,5 @@
-import 'package:enzomir/presentation/onboarding/screen.dart';
+import 'package:enzomir/presentation/pre_auth/getstarted_screen.dart';
+import 'package:enzomir/presentation/pre_auth/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: OnboardingScreen());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: GetstartedScreen(),
+      // home: OnboardingScreen(),
+    );
   }
 }
