@@ -1,3 +1,4 @@
+import 'package:enzomir/presentation/home/home_page.dart';
 import 'package:enzomir/presentation/pre_auth/getstarted_screen.dart';
 import 'package:enzomir/presentation/pre_auth/onboarding_screen.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GetstartedScreen(),
+      home: HomePage(),
       // home: OnboardingScreen(),
     );
   }

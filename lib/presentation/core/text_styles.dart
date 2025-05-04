@@ -78,4 +78,12 @@ class AppTextStyles {
     letterSpacing: 0.16,
     color: AppColors.subtitleTextColor,
   );
+
+  static const TextStyle botNavTextStyle = TextStyle(
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w400, // 400 is normal
+    fontSize: 12.0,
+    height: 1.0, // line-height 100% => 1.0 in Flutter
+    letterSpacing: 0.0,
+  );
 }

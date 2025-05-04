@@ -64,6 +64,11 @@ flutter:
     - assets/images/onboarding/get_started_top_image.png
     - assets/icons/Google.png
     - assets/images/onboarding/party_image.png
+    - assets/icons/bottom_nav/home.png
+    - assets/icons/bottom_nav/customer.png
+    - assets/icons/bottom_nav/calendar.png
+    - assets/icons/bottom_nav/chat_bubble.png
+    - assets/icons/bottom_nav/add.png
       # - assets/images/onboarding/get_started_top_image2.png
 
 
