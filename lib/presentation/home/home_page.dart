@@ -10,15 +10,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.yellow,
       body: Center(child: Text('Home Page', style: TextStyle(fontSize: 24))),
-      floatingActionButton: new FloatingActionButton(
-        shape: CircleBorder(),
-        backgroundColor:AppColors.primary,
-        
-        child: new Icon(Icons.add),
-        elevation: 4.0,
-        onPressed: () {},
-      ),
-            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNav(),
 
     );
