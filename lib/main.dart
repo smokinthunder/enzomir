@@ -1,6 +1,4 @@
-import 'package:enzomir/presentation/home/home_page.dart';
-import 'package:enzomir/presentation/pre_auth/getstarted_screen.dart';
-import 'package:enzomir/presentation/pre_auth/onboarding_screen.dart';
+import 'package:enzomir/presentation/root/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
       // home: OnboardingScreen(),
     );
   }

@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   gap: ^3.0.1
   curved_labeled_navigation_bar: ^2.0.6
+  go_router: ^15.1.1
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,11 @@ flutter:
     - assets/icons/bottom_nav/calendar.png
     - assets/icons/bottom_nav/chat_bubble.png
     - assets/icons/bottom_nav/add.png
+    - assets/icons/bottom_nav/Search.png
+    - assets/images/home/app_bar.png
+    - assets/images/home/recomended_for_you.png
+    - assets/images/events/event1.png
+    - assets/images/events/event2.png
       # - assets/images/onboarding/get_started_top_image2.png
 
 
@@ -86,6 +92,22 @@ flutter:
           weight: 700
         - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 600
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+    - family: Airbnb
+      fonts:
+        - asset: assets/fonts/AirbnbCereal_W_300.otf
+          weight: 300
+        - asset: assets/fonts/AirbnbCereal_W_400.otf
+          weight: 400
+        - asset: assets/fonts/AirbnbCereal_W_500.otf
+          weight: 500
+        - asset: assets/fonts/AirbnbCereal_W_700.otf
+          weight: 700
+        - asset: assets/fonts/AirbnbCereal_W_800.otf
+          weight: 800
+        - asset: assets/fonts/AirbnbCereal_W_900.otf
+          weight: 900
 
 
   #   - images/a_dot_burr.jpeg

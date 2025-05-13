@@ -86,4 +86,79 @@ class AppTextStyles {
     height: 1.0, // line-height 100% => 1.0 in Flutter
     letterSpacing: 0.0,
   );
+
+  static const TextStyle homeHeading = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    fontSize: 18.0,
+    height: 20 / 18, // ≈ 1.11
+    letterSpacing: 0.16,
+    color: AppColors.whiteTextColor,
+  );
+  static const TextStyle hintTextSearch = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
+    fontSize: 16.0,
+    height: 1, // ≈ 1
+    letterSpacing: 0.16,
+    color: AppColors.hintTextColor,
+  );
+
+  static const TextStyle homeSubheading = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700, // 700 corresponds to FontWeight.w700
+    fontSize: 20.0,
+    height: 16 / 20, // line-height divided by font-size = 0.8
+    letterSpacing: 0.16,
+    color: AppColors.whiteButtonTextColor,
+  );
+
+  static const TextStyle recomendedCard = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    fontSize: 16.0,
+    height: 18 / 12, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: Colors.white,
+  );
+  static const TextStyle recomendedCard2 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    fontSize: 8.0,
+    height: 18 / 6, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: Colors.white,
+  );
+  static const TextStyle AppBarHeading = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    fontSize: 26.0,
+    height: 16 / 26, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.primary,
+  );
+  static const TextStyle ExploreHeading = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w700,
+    fontSize: 22.0,
+    height: 16 / 22, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.whiteButtonTextColor,
+  );
+  static const TextStyle ExploreCardTitle = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 16.0,
+    height: 16 / 16, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.whiteButtonTextColor,
+  );
+  static const TextStyle ExploreCardOrganizer = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 14.0,
+    height: 16 / 14, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.subtitleTextColor,
+  );
 }
