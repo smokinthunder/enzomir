@@ -129,7 +129,7 @@ class AppTextStyles {
     letterSpacing: 0.16,
     color: Colors.white,
   );
-  static const TextStyle AppBarHeading = TextStyle(
+  static const TextStyle appBarHeading = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
     fontSize: 26.0,
@@ -137,7 +137,7 @@ class AppTextStyles {
     letterSpacing: 0.16,
     color: AppColors.primary,
   );
-  static const TextStyle ExploreHeading = TextStyle(
+  static const TextStyle exploreHeading = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w700,
     fontSize: 22.0,
@@ -145,7 +145,7 @@ class AppTextStyles {
     letterSpacing: 0.16,
     color: AppColors.whiteButtonTextColor,
   );
-  static const TextStyle ExploreCardTitle = TextStyle(
+  static const TextStyle exploreCardTitle = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
     fontSize: 16.0,
@@ -153,7 +153,15 @@ class AppTextStyles {
     letterSpacing: 0.16,
     color: AppColors.whiteButtonTextColor,
   );
-  static const TextStyle ExploreCardOrganizer = TextStyle(
+  static const TextStyle formLabelText = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 16.0,
+    height: 16 / 16, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.greyText,
+  );
+  static const TextStyle exploreCardOrganizer = TextStyle(
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
     fontSize: 14.0,
@@ -161,4 +169,101 @@ class AppTextStyles {
     letterSpacing: 0.16,
     color: AppColors.subtitleTextColor,
   );
+  static const TextStyle goingText = TextStyle(
+    fontFamily: "Airbnb",
+    fontWeight: FontWeight.w500,
+    fontSize: 14,
+    height: 20 / 12,
+    color: AppColors.primary,
+  );
+  static const TextStyle eventCardTitle = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 17.0,
+    height: 16 / 16, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.pureBlack,
+  );
+
+  static const TextStyle eventCardDate = TextStyle(
+    fontFamily: 'Airbnb',
+    fontWeight: FontWeight.w700,
+    fontSize: 20.0,
+    height: 16 / 16, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.primary,
+  );
+  static const TextStyle eventCardMonth = TextStyle(
+    fontFamily: 'Airbnb',
+    fontWeight: FontWeight.w400,
+    fontSize: 12.0,
+    height: 16 / 16, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.primary,
+  );
+  static const TextStyle locationText = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
+    fontSize: 15.0,
+    height: 1, // ≈ 1
+    letterSpacing: 0.16,
+    color: AppColors.locationTextColor,
+  );
+  static const TextStyle searchDetails1 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 13.0,
+    height: 16 / 14, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.subtitleTextColor,
+  );
+  static const TextStyle searchDetails2 = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 12.0,
+    height: 16 / 14, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.primary,
+  );
+  static const TextStyle inputTextStyle = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w500,
+    fontSize: 16.0,
+    height: 16 / 15, // line-height 16px / font-size 16px = 1.0
+    letterSpacing: 0.16,
+    color: AppColors.whiteButtonTextColor,
+  );
+  static const TextStyle profileName = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 24.0,
+    height: 1,
+    letterSpacing: 0,
+    color: AppColors.whiteButtonTextColor,
+  );
+  static const TextStyle editButtonText = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    height: 24 / 14,
+    letterSpacing: 0,
+    color: AppColors.locationTextColor,
+  );
+  static const TextStyle loginHeading = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+    fontSize: 30,
+    height: 16 / 30,
+    letterSpacing: 0.16,
+    color: AppColors.whiteButtonTextColor,
+  );
+  static const TextStyle loginSubHeading = TextStyle(
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    height: 16 / 16,
+    letterSpacing: 0.16,
+    color: AppColors.subtitleTextColor,
+  );
+  
 }

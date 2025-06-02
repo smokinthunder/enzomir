@@ -1,4 +1,3 @@
-import 'package:enzomir/presentation/core/colors.dart';
 import 'package:enzomir/presentation/core/text_styles.dart';
 import 'package:enzomir/presentation/pages/home/widgets/event_card.dart';
 import 'package:enzomir/presentation/pages/home/widgets/home_filter_icons.dart';
@@ -15,7 +14,7 @@ class HomePage extends StatelessWidget {
       final screenWidth = MediaQuery.of(context).size.width;
       final screenHeight = MediaQuery.of(context).size.height;
 
-    const List<Map<String, dynamic>> HomeFilterIconMap = [
+    const List<Map<String, dynamic>> homeFilterIconMap = [
       {"text": "Sports", "icon": Icons.sports_basketball_rounded},
       {"text": "Music", "icon": Icons.music_note_rounded},
       {"text": "Food", "icon": Icons.fastfood_rounded},
@@ -51,10 +50,10 @@ class HomePage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: List.generate(
-                      HomeFilterIconMap.length,
+                      homeFilterIconMap.length,
                       (index) => HomeFilterIcon(
-                        text: HomeFilterIconMap[index]["text"],
-                        icon: HomeFilterIconMap[index]["icon"],
+                        text: homeFilterIconMap[index]["text"],
+                        icon: homeFilterIconMap[index]["icon"],
                       ),
                     ),
                   ),

@@ -1,7 +1,9 @@
 import 'package:enzomir/presentation/core/colors.dart';
 import 'package:enzomir/presentation/core/text_styles.dart';
+import 'package:enzomir/presentation/root/router.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class GetstartedScreen extends StatelessWidget {
   const GetstartedScreen({super.key});
@@ -64,18 +66,21 @@ class GetstartedScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      width: screenWidth * 0.77,
-                      height: screenWidth * 0.14,
-                      decoration: BoxDecoration(
-                        color: AppColors.whiteButtonTextColor,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Continue with Email',
-                          style: AppTextStyles.getstartedbtn,
-                          textAlign: TextAlign.center,
+                    InkWell(
+                      onTap: () => context.go(Routes.loginPage) ,
+                      child: Container(
+                        width: screenWidth * 0.77,
+                        height: screenWidth * 0.14,
+                        decoration: BoxDecoration(
+                          color: AppColors.whiteButtonTextColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Continue with Email',
+                            style: AppTextStyles.getstartedbtn,
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),

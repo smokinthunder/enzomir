@@ -1,3 +1,5 @@
+import 'package:enzomir/presentation/core/colors.dart';
+import 'package:enzomir/presentation/core/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class EventCard extends StatelessWidget {
@@ -24,25 +26,25 @@ class EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
       width: screenWidth * 0.6,
-      height: 280,
-      margin: const EdgeInsets.all(16),
+      height: screenWidth * 0.65,
+      margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(18),
         child: Stack(
           children: [
             // Event Image
@@ -54,28 +56,15 @@ class EventCard extends StatelessWidget {
               left: 16,
               child: Container(
                 padding: const EdgeInsets.all(8),
+
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.85),
-                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white.withValues(alpha: 0.7),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
                   children: [
-                    Text(
-                      date,
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    Text(
-                      month,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue,
-                      ),
-                    ),
+                    Text(date, style: AppTextStyles.eventCardDate),
+                    Text(month, style: AppTextStyles.eventCardMonth),
                   ],
                 ),
               ),
@@ -88,12 +77,13 @@ class EventCard extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.85),
+                  color: Colors.white.withValues(alpha: 0.7),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(
                   isBookmarked ? Icons.bookmark : Icons.bookmark_border,
-                  color: Colors.blue,
+                  color: AppColors.primary,
+                  size: 15,
                 ),
               ),
             ),
@@ -118,11 +108,7 @@ class EventCard extends StatelessWidget {
                     // Event Title
                     Text(
                       title,
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
+                      style: AppTextStyles.eventCardTitle,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -166,11 +152,7 @@ class EventCard extends StatelessWidget {
 
                         Text(
                           "+$totalAttendees Going",
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue,
-                          ),
+                          style: AppTextStyles.goingText,
                         ),
                       ],
                     ),
@@ -182,16 +164,13 @@ class EventCard extends StatelessWidget {
                       children: [
                         const Icon(
                           Icons.location_on_outlined,
-                          color: Colors.grey,
-                          size: 20,
+                          color: AppColors.locationTextColor,
+                          size: 18,
                         ),
                         const SizedBox(width: 4),
                         Text(
                           location,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey,
-                          ),
+                          style: AppTextStyles.locationText
                         ),
                       ],
                     ),

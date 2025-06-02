@@ -1,7 +1,10 @@
+import 'package:enzomir/presentation/auth/login_page.dart';
+import 'package:enzomir/presentation/auth/signup_page.dart';
 import 'package:enzomir/presentation/pages/events/events_page.dart';
 import 'package:enzomir/presentation/pages/home/home_page.dart';
 import 'package:enzomir/presentation/pages/new_event/new_event_page.dart';
 import 'package:enzomir/presentation/pages/profile/profile_page.dart';
+import 'package:enzomir/presentation/pages/profile/widgets/edit_profile_page.dart';
 import 'package:enzomir/presentation/pages/search/search_page.dart';
 import 'package:enzomir/presentation/pre_auth/getstarted_screen.dart';
 import 'package:enzomir/presentation/pre_auth/onboarding_screen.dart';
@@ -12,7 +15,7 @@ import 'package:go_router/go_router.dart';
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 final router = GoRouter(
   navigatorKey: _rootNavigatorKey,
-  initialLocation: Routes.homePage,
+  initialLocation: Routes.getStartedPage,
   routes: [
     // This is the root route
     //Pre auth routes
@@ -24,7 +27,8 @@ final router = GoRouter(
       path: Routes.getStartedPage,
       builder: (context, state) => const GetstartedScreen(),
     ),
-
+    GoRoute(path: Routes.loginPage, builder: (context, state) => LoginPage()),
+    GoRoute(path: Routes.signUpPage, builder: (context, state) => SignupPage()),
     // This is the main route
     StatefulShellRoute.indexedStack(
       builder:
@@ -51,7 +55,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: Routes.newEventPage,
-              builder: (context, state) => const NewEventPage(),
+              builder: (context, state) => NewEventPage(),
             ),
           ],
         ),
@@ -68,6 +72,12 @@ final router = GoRouter(
             GoRoute(
               path: Routes.profilePage,
               builder: (context, state) => const ProfilePage(),
+              routes: [
+                GoRoute(
+                  path: Routes.editProfilePage,
+                  builder: (context, state) => const EditProfilePage(),
+                ),
+              ],
             ),
           ],
         ),
@@ -85,4 +95,8 @@ class Routes {
   static const String profilePage = '/profile';
   static const String onboardingPage = '/onboarding';
   static const String getStartedPage = '/get-started';
+  static const String editProfilePage = 'edit-profile';
+  static const String nestedEditProfilePage = '/profile/edit-profile';
+  static const String loginPage = '/login';
+  static const String signUpPage = '/signup';
 }

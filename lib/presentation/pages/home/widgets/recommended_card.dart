@@ -25,7 +25,7 @@ class RecommendedCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(15)),
               gradient: LinearGradient(
-                colors: [Colors.transparent, Colors.black.withOpacity(0.5)],
+                colors: [Colors.transparent, Colors.black.withValues(alpha: 0.5)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),

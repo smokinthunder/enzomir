@@ -76,6 +76,9 @@ flutter:
     - assets/images/home/recomended_for_you.png
     - assets/images/events/event1.png
     - assets/images/events/event2.png
+    - assets/images/auth/login_appbar2.png
+    - assets/icons/auth/social_media/X.png
+    - assets/icons/auth/social_media/google.png
       # - assets/images/onboarding/get_started_top_image2.png
 
 
