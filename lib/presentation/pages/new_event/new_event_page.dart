@@ -1,5 +1,5 @@
-import 'package:enzomir/presentation/core/colors.dart';
-import 'package:enzomir/presentation/core/text_styles.dart';
+import 'package:enzomir/core/theme/colors.dart';
+import 'package:enzomir/core/theme/text_styles.dart';
 import 'package:enzomir/presentation/pages/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 

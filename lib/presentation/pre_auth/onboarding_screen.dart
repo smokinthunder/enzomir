@@ -1,9 +1,10 @@
-import 'package:enzomir/presentation/core/colors.dart';
-import 'package:enzomir/presentation/core/text_styles.dart';
+import 'package:enzomir/core/theme/colors.dart';
+import 'package:enzomir/core/theme/text_styles.dart';
 import 'package:enzomir/presentation/root/router.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatelessWidget {
   // Initialize the screen width
@@ -54,7 +55,11 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () => context.go(Routes.getStartedPage),
+                  onTap: () async {
+                    final prefs = await SharedPreferences.getInstance();
+                    await prefs.setBool('isFirstTimeUser', false);
+                    context.go(Routes.getStartedPage);
+                  },
                   child: Container(
                     width: screenWidth * 0.77,
                     height: screenWidth * 0.14,

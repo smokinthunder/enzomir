@@ -1,4 +1,4 @@
-import 'package:enzomir/presentation/core/text_styles.dart';
+import 'package:enzomir/core/theme/text_styles.dart';
 import 'package:enzomir/presentation/pages/search/widgets/custom_search_bar.dart';
 import 'package:enzomir/presentation/pages/search/widgets/filter_pop.dart';
 import 'package:enzomir/presentation/pages/search/widgets/filter_page.dart';

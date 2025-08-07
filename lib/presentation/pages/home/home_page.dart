@@ -1,4 +1,4 @@
-import 'package:enzomir/presentation/core/text_styles.dart';
+import 'package:enzomir/core/theme/text_styles.dart';
 import 'package:enzomir/presentation/pages/home/widgets/event_card.dart';
 import 'package:enzomir/presentation/pages/home/widgets/home_filter_icons.dart';
 import 'package:enzomir/presentation/pages/home/widgets/recommended_card.dart';
