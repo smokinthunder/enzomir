@@ -17,29 +17,34 @@ import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
-final router = GoRouter(
-  navigatorKey: _rootNavigatorKey,
-  // initialLocation: Routes.root,
-  redirect: (context, state) async {
-    final cubit = context.read<AppUserCubit>();
-    final prefs = await SharedPreferences.getInstance();
-    final isFirstTime = prefs.getBool('isFirstTimeUser') ?? true;
 
-    final appState = cubit.state;
+class AppRouter {
+  final bool isLoggedin;
+  AppRouter(this.isLoggedin);
 
-    if (isFirstTime) {
-      return Routes.onboardingPage;
-    } else if (appState is AppUserLoggedIn) {
-      return Routes.homePage;
-    } else if (appState is AppUserInitial) {
-      return Routes.getStartedPage;
-    }
+  late final router = GoRouter(
+    navigatorKey: _rootNavigatorKey,
+    // initialLocation: Routes.root,
+    redirect: (context, state) async {
+      // final cubit = context.read<AppUserCubit>();
+      final prefs = await SharedPreferences.getInstance();
+      final isFirstTime = prefs.getBool('isFirstTimeUser') ?? true;
 
-    return null; // stay
-  },
-  routes: appRoutes,
-  
-);
+      // final appState = cubit.state;
+
+      if (isFirstTime) {
+        return Routes.onboardingPage;
+      } else if (isLoggedin&& (state.path == Routes.homePage)) {
+        return Routes.homePage;
+      } else if (!isLoggedin && (state.path == Routes.getStartedPage)) {
+        return Routes.getStartedPage;
+      }
+
+      return null; // stay
+    },
+    routes: appRoutes,
+  );
+}
 
 class Routes {
   Routes._();

@@ -27,18 +27,38 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   void initState() {
-     super.initState();
-     context.read<AuthBloc>().add(AuthIsUserLoggedIn());
+    super.initState();
+    context.read<AuthBloc>().add(AuthIsUserLoggedIn());
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocSelector<AppUserCubit, AppUserState, bool>(
+      selector: (state) {
+        return state is AppUserLoggedIn;
+      },
+      builder: (context, isLoggedIn) {
+        if (isLoggedIn) {
+          return MainMaterialApp(true);
+        } else {
+          return MainMaterialApp(false);
+        }
+      },
+    );
+  }
+}
+
+class MainMaterialApp extends StatelessWidget {
+  final bool isLoggedIn;
+  const MainMaterialApp(this.isLoggedIn, {super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: router,
+      routerConfig: AppRouter(isLoggedIn).router,
       debugShowCheckedModeBanner: false,
-      // home: OnboardingScreen(),
     );
   }
 }
