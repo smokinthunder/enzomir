@@ -13,7 +13,7 @@ class AppUserCubit extends Cubit<AppUserState> {
       print("User is null, emitting AppUserInitial state");
     } else {
       emit(AppUserLoggedIn(user));
-      print("User is not null, emitting AppUserLoggedIn state with user: ${user.email}");
+      print("User is not null, emitting AppUserLoggedIn state with user: ${user.email} with name: ${user.name}");
     }
   }
 }

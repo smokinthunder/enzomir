@@ -1,4 +1,3 @@
-import 'package:enzomir/core/common/presentation/cubits/app_user/app_user_cubit.dart';
 import 'package:enzomir/features/auth/presentation/pages/login_page.dart';
 import 'package:enzomir/features/auth/presentation/pages/signup_page.dart';
 import 'package:enzomir/presentation/pages/events/events_page.dart';
@@ -12,7 +11,6 @@ import 'package:enzomir/presentation/pre_auth/onboarding_screen.dart';
 import 'package:enzomir/presentation/root/layout_scaffold.dart';
 import 'package:enzomir/presentation/root/root_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,13 +22,9 @@ class AppRouter {
 
   late final router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    // initialLocation: Routes.root,
     redirect: (context, state) async {
-      // final cubit = context.read<AppUserCubit>();
       final prefs = await SharedPreferences.getInstance();
       final isFirstTime = prefs.getBool('isFirstTimeUser') ?? true;
-
-      // final appState = cubit.state;
 
       if (isFirstTime) {
         return Routes.onboardingPage;

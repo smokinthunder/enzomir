@@ -76,7 +76,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     _appUserCubit.updateUser(user);
     print("AppUserSate updated with user: ${user.email}");
     emit(AuthSuccess(user));
-    print("AuthSuccess emitted with user: ${user.email}");
+    print("AuthSuccess emitted with user: ${user.name}");
   }
 
   Future<void> _authLogOut(AuthLogOut event, Emitter<AuthState> emit) async {

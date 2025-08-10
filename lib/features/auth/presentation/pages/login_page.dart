@@ -8,10 +8,8 @@ import 'package:enzomir/features/auth/presentation/widgets/or_divider.dart';
 import 'package:enzomir/features/auth/presentation/widgets/sign_up_text.dart';
 import 'package:enzomir/features/auth/presentation/widgets/social_buttons.dart';
 import 'package:enzomir/features/auth/presentation/widgets/welcome_text.dart';
-import 'package:enzomir/presentation/root/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -73,7 +71,7 @@ class _BottomSectionState extends State<BottomSection> {
               if (state is AuthLoading) {
                 return const Loader();
               }
-              if (state is AuthSuccess){
+              if (state is AuthSuccess) {
                 // WidgetsBinding.instance.addPostFrameCallback((_) {
                 //   context.go(Routes.homePage);
                 // });

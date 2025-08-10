@@ -1,3 +1,4 @@
+import 'package:enzomir/core/common/presentation/cubits/app_user/app_user_cubit.dart';
 import 'package:enzomir/core/theme/colors.dart';
 import 'package:enzomir/core/theme/text_styles.dart';
 import 'package:enzomir/features/auth/presentation/bloc/auth_bloc.dart';
@@ -8,8 +9,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+
+
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    context.read<AuthBloc>().add(AuthIsUserLoggedIn());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,17 +42,28 @@ class ProfilePage extends StatelessWidget {
                   CircleAvatar(
                     radius: 60,
                     backgroundImage: AssetImage(
-                      'assets/profile.jpg',
+                      '',
                     ), // Replace with your image path
                   ),
                   const SizedBox(height: 16),
 
                   // Name and email
-                  Text('Domenic Winget', style: AppTextStyles.profileName),
+                  BlocBuilder<AppUserCubit, AppUserState>(
+                    builder: (context, state) {
+                      return Text(
+                        state is AppUserLoggedIn ? state.user.name : 'Guest',
+                        style: AppTextStyles.profileName,
+                      );
+                    },
+                  ),
                   const SizedBox(height: 8),
-                  Text(
-                    'jennydemgmail.com',
-                    style: AppTextStyles.searchDetails1,
+                  BlocBuilder<AppUserCubit, AppUserState>(
+                    builder: (context, state) {
+                      return Text(
+                        state is AppUserLoggedIn ? state.user.email : '',
+                        style: AppTextStyles.searchDetails1,
+                      );
+                    },
                   ),
                   const SizedBox(height: 16),
 
