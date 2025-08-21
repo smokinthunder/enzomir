@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "954242563166",
+    "project_id": "enzomir-c32b8",
+    "storage_bucket": "enzomir-c32b8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954242563166:android:531f2ef979ddbdf6da48cf",
+        "android_client_info": {
+          "package_name": "com.example.enzomir"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXlWrO0Wxx_6uarr6wMRN1hHzvWVL6dAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

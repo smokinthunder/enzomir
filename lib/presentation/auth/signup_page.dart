@@ -1,11 +1,7 @@
 import 'package:enzomir/presentation/auth/widgets/back_button_widget.dart';
-import 'package:enzomir/presentation/auth/widgets/custom_text_field.dart';
 import 'package:enzomir/presentation/auth/widgets/login_button.dart';
-import 'package:enzomir/presentation/auth/widgets/or_divider.dart';
-import 'package:enzomir/presentation/auth/widgets/password_text_field.dart';
 import 'package:enzomir/presentation/auth/widgets/sign_up_form.dart';
 import 'package:enzomir/presentation/auth/widgets/sign_up_text.dart';
-import 'package:enzomir/presentation/auth/widgets/social_buttons.dart';
 import 'package:enzomir/presentation/core/text_styles.dart';
 import 'package:flutter/material.dart';
 
