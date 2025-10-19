@@ -1,4 +1,5 @@
-import 'package:enzomir/presentation/root/router.dart';
+import 'package:enzomir/core/theme/theme.dart';
+import 'package:enzomir/shared/navigation/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      title: 'Enzomir',
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      // home: OnboardingScreen(),
+      
+      // Professional Theme Configuration
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system, // Follows system preference
     );
   }
 }
